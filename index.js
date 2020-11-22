@@ -5,6 +5,8 @@ const mongoose = require('mongoose')
 const Post = require('./models/Post');
 const { MONGODB } = require('./config.js')
 
+const PORT = process.env.port || 3000;
+
 const typeDefs = gql`
     type Post {
         id: ID!
@@ -35,13 +37,15 @@ const server = new ApolloServer({
     resolvers
 });
 
-mongoose.connect(MONGODB, { userNewUrlParser: true })
-    .then(() => {
-        console.log('MongoDB Connected')
-        return server.listen({  port: 3000 })
-    .then(res => {
-        console.log(`Server running at ${res.url}`)
-    })
-})
-
-server.listen({port: 3000})
+mongoose
+  .connect(MONGODB, { useNewUrlParser: true })
+  .then(() => {
+    console.log('MongoDB Connected');
+    return server.listen({ port: PORT });
+  })
+  .then((res) => {
+    console.log(`Server running at ${res.url}`);
+  })
+  .catch(err => {
+    console.error(err)
+  })
