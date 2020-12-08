@@ -8,12 +8,10 @@ const { MONGODB } = require('./config.js')
 
 const PORT = process.env.port || 3000;
 
-
-
-
 const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    context: ({ req }) => ({ req }) 
 });
 
 mongoose
