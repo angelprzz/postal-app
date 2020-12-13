@@ -35,8 +35,8 @@ function SinglePost(props){
                     <Grid.Column width={2}>
                         <Image
                             src='https://react.semantic-ui.com/images/avatar/large/molly.png'
-                            size="small
-                            float="right
+                            size="small"
+                            float="right"
                         />
                     </Grid.Column>
                     <Grid.Column width={10}>
@@ -52,12 +52,12 @@ function SinglePost(props){
                             <Button
                                 as="div"
                                 labelPosition="right"
-                                onclick={() => console.log('Comment on post')}
+                                onClick={() => console.log('Comment on post')}
                             >
                                 <Button basic color="blue">
                                     <Icon name="comments"/>
                                 </Button>
-                                <Label basic color="blue pointing="left>
+                                <Label basic color="blue" pointing="left">
                                     {commentCount}
                                 </Label>
                             </Button>
@@ -81,13 +81,13 @@ const FETCH_POST_QUERY = gql`
             body 
             createdAt 
             username 
-            likeCount
             likes {
                 username
             }
+            likeCount
             comments{
                 id 
-                user 
+                username 
                 createdAt 
                 body
             }
