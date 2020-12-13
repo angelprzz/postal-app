@@ -13,11 +13,11 @@ function SinglePost(props){
     const {user} = useContext(AuthContext)
     console.log(postId)
 
-    const {data: {getPost}} = useQuery(FETCH_POST_QUERY, {
+    const { data: { getPost } = {}} =  useQuery(FETCH_POST_QUERY, {
         variables: {
-            postId
+          postId
         }
-    })
+    });
 
     function deletePostCallback(){
         props.history.push('/')
@@ -77,15 +77,22 @@ function SinglePost(props){
 const FETCH_POST_QUERY = gql`
     query($postId: ID!){
         getPost(postId: $postId){
-            id body createdAt username likeCount
-            likes{
+            id 
+            body 
+            createdAt 
+            username 
+            likeCount
+            likes {
                 username
             }
             comments{
-                id user createdAt body
+                id 
+                user 
+                createdAt 
+                body
             }
         }
     }
-`
+`;
 
 export default SinglePost
