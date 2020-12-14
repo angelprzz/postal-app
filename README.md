@@ -2,7 +2,7 @@
 
 ✨**You can check the app in production at https://postal-app.netlify.app/**
 
-This webapp has been built using **MongoDB**, **Apollo GraphQL** and **React** *(MERNG Stack)*.
+This web app has been built using **MongoDB**, **Apollo GraphQL** and **React** (MERNG Stack).
 
 Inside the app you will be able to:
 * Register and login users.
