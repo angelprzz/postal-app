@@ -21,5 +21,5 @@ module.exports = {
 ```
 2. Install the **server** dependencies with `npm install` at the root of the project and run `npm run start`. The backend code will be running at http://localhost:5000
 3. Go to the **client** folder and run `npm install` to install the frontend dependencies.
-3. Start the project with `npm start`.
+3. Start the frontend project with `npm start`.
 4. Open http://localhost:3000 in your browser.
