@@ -35,6 +35,7 @@ function PostForm() {
             <Form.Field>
               <Form.Input
                 placeholder="Type something"
+                autoComplete="off"
                 name="body"
                 onChange={onChange}
                 value={values.body}
