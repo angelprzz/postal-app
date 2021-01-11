@@ -1,6 +1,6 @@
 # Postal
 
-✨**You can check the app in production at https://postal-app.netlify.app/**
+✨**App in production at https://postal-app.netlify.app/**
 
 This web app has been built using **MongoDB**, **Apollo GraphQL** and **React** (MERN Stack + GraphQL).
 
